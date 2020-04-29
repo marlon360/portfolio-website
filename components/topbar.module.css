@@ -1,0 +1,23 @@
+.topbar {
+    width: 100%;
+    background-color: black;
+
+    padding: 0.5rem 1rem;
+    box-sizing: border-box;
+}
+
+.topbar-content {
+    width: 100%;
+    max-width: 2200px;
+    margin:auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    color: white;
+    font-size: 0.8rem;
+}
+
+.topbar-content a {
+    color: white;
+}

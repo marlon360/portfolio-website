@@ -1,0 +1,18 @@
+@import url('https://rsms.me/inter/inter.css');
+
+:root {
+    --bg-1: #F6F6F5;
+    --bg-2: #FAFAFA;
+    --bg-3: #FFFFFF;
+
+    --shadow: 0 20px 60px 0 rgba(0,0,0,0.30);
+}
+
+html { font-family: 'Inter', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif; }
+@supports (font-variation-settings: normal) {
+  html { font-family: 'Inter var', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif; }
+}
+body {
+    padding: 0;
+    margin: 0;
+}

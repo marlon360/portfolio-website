@@ -20,17 +20,27 @@ export default function Home() {
           <img src="/portrait-1.jpg" />
         </div>
       </div>
+      
+      <div id="social" className="container">
+        <div className="container-content">
+          <img alt="Github" src="/icons/github.svg" />
+          <img alt="Twitter" src="/icons/twitter.svg" />
+          <img alt="Youtube" src="/icons/youtube.svg" />
+          <img alt="LinkedIn" src="/icons/linkedin.svg" />
+        </div>
+      </div>
 
       <style jsx>{`
         .container {
           width: 100%;
+          border-top: 2px solid #E9E9E9;
         }
         .container-content {
           width: 100%;
           max-width: 900px;
 
           margin: auto;
-          padding: 5rem 1.6rem;
+          padding: 2rem 1.6rem;
 
           box-sizing: border-box;
         }
@@ -58,7 +68,22 @@ export default function Home() {
           height: 300px;
           border: 0.6rem solid white;
           box-shadow: var(--shadow);
-          margin: 0 0 0 2rem;
+          margin: 2rem 0 2rem 2rem;
+        }
+
+        .container#social {
+          background: var(--bg-2);
+        }
+        .container#social .container-content {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-around;
+          align-items: center;
+          max-width: 600px;
+        }
+        .container#social img {
+          height: 40px;
+          max-width: 40px;
         }
       `}</style>
     </>

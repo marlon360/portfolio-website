@@ -15,9 +15,9 @@ export default function Home() {
               Hey!<br />
               I'm Marlon.
             </h1>
-            <h2>Software Developer</h2>
+            <h3>Software Developer</h3>
           </div>
-          <img src="/portrait-1.jpg" />
+          <img alt="portrait" src="/portrait-1.jpg" />
         </div>
       </div>
       
@@ -27,6 +27,21 @@ export default function Home() {
           <img alt="Twitter" src="/icons/twitter.svg" />
           <img alt="Youtube" src="/icons/youtube.svg" />
           <img alt="LinkedIn" src="/icons/linkedin.svg" />
+        </div>
+      </div>
+      
+      <div id="about" className="container">
+        <div className="container-content">
+          <h2>About me</h2>
+          <h3>Who am I?</h3>
+          <div className="arrangement-container">
+            <div className="text-box">
+              I’m <b>Marlon Lückert</b>  from Hamburg, Germany! Currently I’m studying Digital Realiyt M.Sc. in Hamburg.
+              I love building experiences for the <b>Web</b>, <b>Augmented Reality</b>, <b>Virtual Reality</b> and <b>Games</b>.<br/>
+              Have a look at my portfolio below!
+            </div>
+            <img src="/portrait-2.jpg" alt="portrait" />
+          </div>
         </div>
       </div>
 
@@ -53,15 +68,21 @@ export default function Home() {
           justify-content: space-between;
           align-items: center;
         }
-        .container#landing h1 {
+        .container h1 {
           font-size: 6rem;
           line-height: 6rem;
           letter-spacing: -2.5px;
           margin: 0;
         }
-        .container#landing h2 {
+        .container h2 {
+          font-size: 4.2rem;
+          letter-spacing: -0.5px;
+          margin: 0;
+        }
+        .container h3 {
           font-size: 1.4rem;
           font-weight: 400;
+          margin: 0.8rem 0;
           color: #585858;
         }
         .container#landing img {
@@ -85,6 +106,43 @@ export default function Home() {
           height: 40px;
           max-width: 40px;
         }
+
+        .container#about {
+          text-align: center;
+        }
+
+        .container#about .container-content {
+          
+        }
+
+        .container#about .arrangement-container {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          margin: 3rem 1rem;
+        }
+
+        .container#about img {
+          height: 340px;
+          border-radius: 10px;
+
+          transform: translateX(40%);
+        }
+        .container#about .text-box {
+          text-align: left;
+          background: white;
+          box-shadow: var(--shadow);
+          padding: 1.2rem;
+          border-radius: 10px;
+          width: 340px;
+          font-weight: 300;
+          z-index: 1;
+
+          position: absolute;
+          transform: translateX(-40%) translateY(-30%);
+        }
+
       `}</style>
     </>
   )

@@ -6,6 +6,7 @@ export default function Home() {
     <>
       <Head>
         <title>Marlon Lückert</title>
+        <meta name="Description" content="Marlon Lückert. Software Developer. This is the portfolio of Marlon Lückert showcasing his latest work."></meta>
       </Head>
       <TopbarComponent />
       <div id="landing" className="container">

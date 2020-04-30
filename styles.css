@@ -4,8 +4,32 @@
     --bg-1: #F6F6F5;
     --bg-2: #FAFAFA;
     --bg-3: #FFFFFF;
+    --bg-4: #000000;
+
+    --color-1: #000000;
+    --color-2: #585858;
+    --color-3: #FFFFFF;
+
+    --border: 2px solid #E9E9E9;
+    --border-dark: none;
 
     --shadow: 0 20px 60px 0 rgba(0,0,0,0.30);
+}
+
+[data-theme="dark"] {
+    --bg-1: #111111;
+    --bg-2: #111111;
+    --bg-3: #000000;
+    --bg-4: #F3F3F3;
+
+    --color-1: #FFFFFF;
+    --color-2: #C4C4C4;
+    --color-3: #000000;
+
+    --border: 2px solid #333333;
+    --border-dark: 2px solid #595959;
+
+    --shadow: 0 20px 60px 0 rgba(0,0,0,0.90);
 }
 
 html { font-family: 'Inter', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif; }

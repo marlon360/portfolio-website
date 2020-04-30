@@ -1,6 +1,6 @@
 .topbar {
     width: 100%;
-    background-color: black;
+    background-color: var(--bg-4);
 
     padding: 0.5rem 1rem;
     box-sizing: border-box;
@@ -14,10 +14,10 @@
     flex-direction: row;
     justify-content: space-between;
 
-    color: white;
+    color: var(--color-3);
     font-size: 0.8rem;
 }
 
 .topbar-content a {
-    color: white;
+    color: var(--color-3);
 }

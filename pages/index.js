@@ -86,7 +86,8 @@ export default function Home() {
       <style jsx>{`
         .container {
           width: 100%;
-          border-top: 2px solid #E9E9E9;
+          border-top: var(--border);
+          color: var(--color-1);
         }
         .container-content {
           width: 100%;
@@ -127,7 +128,7 @@ export default function Home() {
           font-size: 1.4rem;
           font-weight: 400;
           margin: 0.8rem 0;
-          color: #585858;
+          color: var(--color-2);
         }
         @media (max-width: 650px){
           .container h1 {
@@ -190,6 +191,7 @@ export default function Home() {
 
         .container#about {
           text-align: center;
+          background: var(--bg-3);
         }
 
         .container#about .container-content {
@@ -212,13 +214,14 @@ export default function Home() {
         }
         .container#about .text-box {
           text-align: left;
-          background: white;
+          background: var(--bg-3);
           box-shadow: var(--shadow);
           padding: 1.2rem;
           border-radius: 10px;
           width: 340px;
           font-weight: 300;
           z-index: 1;
+          border: var(--border-dark);
 
           position: absolute;
           transform: translateX(-30%) translateY(-30%);

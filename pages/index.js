@@ -22,6 +22,7 @@ export default function Home() {
       <Head>
         <title>Marlon Lückert</title>
         <meta name="Description" content="Marlon Lückert. Software Developer. This is the portfolio of Marlon Lückert showcasing his latest work."></meta>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"></meta>
       </Head>
       <TopbarComponent />
       <div id="landing" className="container">

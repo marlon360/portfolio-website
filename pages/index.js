@@ -24,16 +24,16 @@ export default function Home() {
       
       <div id="social" className="container">
         <div className="container-content">
-          <a href="https://github.com/marlon360" target="_blank">
+          <a href="https://github.com/marlon360" target="_blank" rel="noopener">
             <img alt="Github" src="/icons/github.svg" />
           </a>
-          <a href="https://twitter.com/Marlon360" target="_blank">
+          <a href="https://twitter.com/Marlon360" target="_blank" rel="noopener">
             <img alt="Twitter" src="/icons/twitter.svg" />
           </a>
-          <a href="https://www.youtube.com/channel/UCTbvpjAfRFcu7jFe92juhEg" target="_blank">
+          <a href="https://www.youtube.com/channel/UCTbvpjAfRFcu7jFe92juhEg" target="_blank" rel="noopener">
             <img alt="Youtube" src="/icons/youtube.svg" />
           </a>
-          <a href="https://www.linkedin.com/in/marlon-lueckert/" target="_blank">
+          <a href="https://www.linkedin.com/in/marlon-lueckert/" target="_blank" rel="noopener">
             <img alt="LinkedIn" src="/icons/linkedin.svg" />
           </a>
         </div>

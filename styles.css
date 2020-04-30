@@ -16,6 +16,10 @@
     --shadow: 0 20px 60px 0 rgba(0,0,0,0.30);
 }
 
+.github-outer {
+    fill: #1B1F23;
+}
+
 @media (prefers-color-scheme: dark) {
     :root {
         --bg-1: #111111;
@@ -53,9 +57,6 @@
     --shadow: 0 20px 60px 0 rgba(0,0,0,0.90);
 }
 
-.github-outer {
-    fill: #1B1F23;
-}
 [data-theme="dark"] .github-outer {
     fill: #FFFFFF;
 }

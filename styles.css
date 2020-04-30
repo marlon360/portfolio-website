@@ -16,6 +16,27 @@
     --shadow: 0 20px 60px 0 rgba(0,0,0,0.30);
 }
 
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg-1: #111111;
+        --bg-2: #111111;
+        --bg-3: #000000;
+        --bg-4: #F3F3F3;
+
+        --color-1: #FFFFFF;
+        --color-2: #C4C4C4;
+        --color-3: #000000;
+
+        --border: 2px solid #333333;
+        --border-dark: 2px solid #595959;
+
+        --shadow: 0 20px 60px 0 rgba(0,0,0,0.90);
+    }
+    .github-outer {
+        fill: #FFFFFF;
+    }
+}
+
 [data-theme="dark"] {
     --bg-1: #111111;
     --bg-2: #111111;
@@ -30,6 +51,13 @@
     --border-dark: 2px solid #595959;
 
     --shadow: 0 20px 60px 0 rgba(0,0,0,0.90);
+}
+
+.github-outer {
+    fill: #1B1F23;
+}
+[data-theme="dark"] .github-outer {
+    fill: #FFFFFF;
 }
 
 html { font-family: 'Inter', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif; }

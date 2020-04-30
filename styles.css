@@ -10,8 +10,10 @@
     --color-2: #585858;
     --color-3: #FFFFFF;
 
+    --primary: #0070F3;
+
     --border: 2px solid #E9E9E9;
-    --border-dark: none;
+    --border-dark: 2px solid transparent;
 
     --shadow: 0 20px 60px 0 rgba(0,0,0,0.30);
 
@@ -32,6 +34,8 @@
         --color-1: #FFFFFF;
         --color-2: #C4C4C4;
         --color-3: #000000;
+
+        --primary: #0069e0;
 
         --border: 2px solid #333333;
         --border-dark: 2px solid #595959;
@@ -56,6 +60,8 @@
     --color-2: #C4C4C4;
     --color-3: #000000;
 
+    --primary: #0069e0;
+
     --border: 2px solid #333333;
     --border-dark: 2px solid #595959;
 
@@ -78,8 +84,10 @@
     --color-2: #585858;
     --color-3: #FFFFFF;
 
+    --primary: #0070F3;
+
     --border: 2px solid #E9E9E9;
-    --border-dark: none;
+    --border-dark: 2px solid transparent;
 
     --shadow: 0 20px 60px 0 rgba(0,0,0,0.30);
 
@@ -102,6 +110,6 @@ body {
 h1, h2, h3, p {
     transition: color 600ms ease;
 }
-div {
+div, a {
     transition: background 600ms ease, border 600ms ease;
 }

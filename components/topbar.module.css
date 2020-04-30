@@ -44,3 +44,9 @@
 .select:focus {
 	outline: none;
 }
+
+.theme-switcher {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}

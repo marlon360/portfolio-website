@@ -10,7 +10,7 @@ export default function TopbarComponent() {
         <div className={styles.topbar}>
             <div className={styles["topbar-content"]}>
                 <span>Marlon Lückert</span>
-                <div className="theme-switcher">
+                <div className={styles["theme-switcher"]}>
                     <label for="theme-switcher">Theme</label>
                     <select id="theme-switcher" onChange={onChange} className={styles.select}>
                         <option value="system">System</option>

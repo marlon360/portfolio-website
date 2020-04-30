@@ -40,6 +40,10 @@ export default function Home() {
               <h3>Game</h3>
             </div>
             <h3><span ref={textInput}/> Developer</h3>
+            <div className="button-container">
+              <a className="primary" href="mailto:m.lueckert@me.com">Contact me</a>
+              <a className="secondary" href="#projects">Projects</a>
+            </div>
           </div>
           <img alt="portrait" src="/portrait-1.jpg" />
         </div>
@@ -101,6 +105,30 @@ export default function Home() {
 
           box-sizing: border-box;
         }
+        a.primary, a.secondary {
+          text-decoration: none;
+          padding: 0.8rem 1.6rem;
+          box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+          border-radius: 6px;
+          display: block;
+          text-align: center;
+          border: 2px solid transparent;
+          transition: all 200ms ease;
+        }
+        a.primary:hover, a.secondary:hover {
+          transform: translateY(-2%);
+          box-shadow: 0 8px 26px rgba(0,0,0,0.18);
+        }
+        a.primary {
+          background: var(--primary);
+          color: white;
+          margin-right: 2rem;
+        }
+        a.secondary {
+          background: var(--bg-3);
+          border: var(--border-dark);
+          color: var(--color-2);
+        }
         .container#landing {
           background: var(--bg-1);
         }
@@ -110,10 +138,33 @@ export default function Home() {
           justify-content: space-between;
           align-items: center;
         }
+        .container#landing .button-container {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          margin: 2rem 0 0.2rem 0;
+          max-width: 440px;
+        }
+        .container#landing .headline-container {
+          width: 100%;
+        }
+        .container#landing a {
+          flex-grow: 1;
+        }
         @media (max-width: 650px){
           .container#landing .container-content {
             flex-direction: column;
             text-align: center;
+          }
+          .container#landing a {
+            font-size: 0.8rem;
+            padding: 0.8rem 0.6rem;
+          }
+          .container#landing .button-container {
+            margin: 2rem auto 0.2rem auto;
+          }
+          a.primary {
+            margin-right: 1rem;
           }
         }
         .container h1 {

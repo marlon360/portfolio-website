@@ -13,6 +13,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
 
     color: var(--color-3);
     font-size: 0.8rem;
@@ -20,4 +21,26 @@
 
 .topbar-content a {
     color: var(--color-3);
+}
+
+.select {
+    border: 1px solid #9a9a9a;
+    border-radius: 6px;
+    color: var(--color-3);
+    margin-left: 0.6rem;
+    padding: 0.3rem 1.4rem 0.3rem 0.6rem;
+    -moz-appearance: none;
+	-webkit-appearance: none;
+	appearance: none;
+    background-image: var(--arrow);
+    background-color: transparent;
+	background-repeat: no-repeat, repeat;
+	background-position: right .7em top 50%, 0 0;
+	background-size: .65em auto, 100%;
+}
+.select::-ms-expand {
+	display: none;
+}
+.select:focus {
+	outline: none;
 }

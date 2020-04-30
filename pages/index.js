@@ -1,7 +1,22 @@
+import { useRef, useEffect } from 'react';
 import Head from 'next/head'
 import TopbarComponent from '../components/topbar.component'
+import Typed from 'typed.js';
 
 export default function Home() {
+
+  const textInput = useRef(null);
+  const typedStrings = useRef(null);
+
+  useEffect(() => new Typed(textInput.current, {
+    stringsElement: typedStrings.current,
+    typeSpeed: 120,
+    backSpeed: 30,
+    backDelay: 2000,
+    showCursor: false,
+    loop: true
+  }));
+
   return (
     <>
       <Head>
@@ -16,7 +31,14 @@ export default function Home() {
               Hey!<br />
               I'm Marlon.
             </h1>
-            <h3>Software Developer</h3>
+            <div ref={typedStrings}>
+              <h3>Software</h3>
+              <h3>Augmented Reality</h3>
+              <h3>Virtual Reality</h3>
+              <h3>Web</h3>
+              <h3>Game</h3>
+            </div>
+            <h3><span ref={textInput}/> Developer</h3>
           </div>
           <img alt="portrait" src="/portrait-1.jpg" />
         </div>

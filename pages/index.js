@@ -44,6 +44,13 @@ export default function Home() {
           </div>
         </div>
       </div>
+      
+      <div id="projects" className="container">
+        <div className="container-content">
+          <h2>Project Showcase</h2>
+          <h3>What am I doing?</h3>
+        </div>
+      </div>
 
       <style jsx>{`
         .container {
@@ -55,7 +62,7 @@ export default function Home() {
           max-width: 900px;
 
           margin: auto;
-          padding: 2rem 1.6rem;
+          padding: 3rem 1.6rem;
 
           box-sizing: border-box;
         }
@@ -101,6 +108,8 @@ export default function Home() {
           justify-content: space-around;
           align-items: center;
           max-width: 600px;
+
+          padding: 1.6rem 1.6rem;
         }
         .container#social img {
           height: 40px;
@@ -141,6 +150,11 @@ export default function Home() {
 
           position: absolute;
           transform: translateX(-40%) translateY(-30%);
+        }
+
+        .container#projects {
+          background: var(--bg-2);
+          text-align: center;
         }
 
       `}</style>

@@ -24,10 +24,18 @@ export default function Home() {
       
       <div id="social" className="container">
         <div className="container-content">
-          <img alt="Github" src="/icons/github.svg" />
-          <img alt="Twitter" src="/icons/twitter.svg" />
-          <img alt="Youtube" src="/icons/youtube.svg" />
-          <img alt="LinkedIn" src="/icons/linkedin.svg" />
+          <a href="https://github.com/marlon360" target="_blank">
+            <img alt="Github" src="/icons/github.svg" />
+          </a>
+          <a href="https://twitter.com/Marlon360" target="_blank">
+            <img alt="Twitter" src="/icons/twitter.svg" />
+          </a>
+          <a href="https://www.youtube.com/channel/UCTbvpjAfRFcu7jFe92juhEg" target="_blank">
+            <img alt="Youtube" src="/icons/youtube.svg" />
+          </a>
+          <a href="https://www.linkedin.com/in/marlon-lueckert/" target="_blank">
+            <img alt="LinkedIn" src="/icons/linkedin.svg" />
+          </a>
         </div>
       </div>
       
@@ -146,6 +154,10 @@ export default function Home() {
         .container#social img {
           height: 40px;
           max-width: 40px;
+          transition: transform 250ms ease;
+        }
+        .container#social a:hover img {
+          transform: translateY(-10%);
         }
         @media (max-width: 650px){
           .container#social img {

@@ -75,6 +75,12 @@ export default function Home() {
           justify-content: space-between;
           align-items: center;
         }
+        @media (max-width: 650px){
+          .container#landing .container-content {
+            flex-direction: column;
+            text-align: center;
+          }
+        }
         .container h1 {
           font-size: 6rem;
           line-height: 6rem;
@@ -92,11 +98,36 @@ export default function Home() {
           margin: 0.8rem 0;
           color: #585858;
         }
+        @media (max-width: 650px){
+          .container h1 {
+            font-size: 3rem;
+            line-height: 3rem;
+          }
+          .container h2 {
+            font-size: 2.2rem;
+          }
+          .container h3 {
+            font-size: 1.2rem;
+            margin: 0.5rem 0;
+          }
+        }
         .container#landing img {
           height: 300px;
-          border: 0.6rem solid white;
+          outline: solid 0.6rem white;
+          outline-offset: -0.55rem;
           box-shadow: var(--shadow);
           margin: 2rem 0 2rem 2rem;
+        }
+
+        @media (max-width: 650px){
+          .container#landing img {
+            height: 300px;
+            box-shadow: var(--shadow);
+            margin: 2rem auto 1rem auto;
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+          }
         }
 
         .container#social {
@@ -107,13 +138,19 @@ export default function Home() {
           flex-direction: row;
           justify-content: space-around;
           align-items: center;
-          max-width: 600px;
+          max-width: 650px;
 
           padding: 1.6rem 1.6rem;
         }
         .container#social img {
           height: 40px;
           max-width: 40px;
+        }
+        @media (max-width: 650px){
+          .container#social img {
+            height: 30px;
+            max-width: 30px;
+          }
         }
 
         .container#about {
@@ -136,7 +173,7 @@ export default function Home() {
           height: 340px;
           border-radius: 10px;
 
-          transform: translateX(40%);
+          transform: translateX(50%);
         }
         .container#about .text-box {
           text-align: left;
@@ -149,7 +186,27 @@ export default function Home() {
           z-index: 1;
 
           position: absolute;
-          transform: translateX(-40%) translateY(-30%);
+          transform: translateX(-30%) translateY(-30%);
+        }
+
+        @media (max-width: 650px){
+          .container#about .arrangement-container {
+            display: flex;
+            flex-direction: column;
+            margin: 1rem 1rem;
+          }
+          .container#about img {
+            transform: translateX(0);
+            width: 96%;
+            max-width: 300px;
+            height: auto;
+          }
+          .container#about .text-box {
+            width: 100%;
+            max-width: 340px;
+            position: relative;
+            transform: translateX(0%) translateY(10%);
+          }
         }
 
         .container#projects {

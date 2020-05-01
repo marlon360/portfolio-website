@@ -279,6 +279,8 @@ export default function Home() {
           font-weight: 300;
           z-index: 1;
           border: var(--border-dark);
+          font-size: 1rem;
+          line-height: 1.45rem;
 
           position: absolute;
           transform: translateX(-30%) translateY(-30%);

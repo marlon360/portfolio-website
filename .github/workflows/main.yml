@@ -1,0 +1,31 @@
+name: CI
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: build
+        run: |
+          npm install
+          npm run build
+      - name: Now CI Deployment
+        id: now
+        uses: amondnet/now-deployment@v2.0.2
+        with:
+          zeit-token: ${{ secrets.VERCEL_TOKEN }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          now-org-id: ${{ secrets.VERCEL_ORG_ID }}
+          now-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
+      - name: Lighthouse CI Action
+        uses: treosh/lighthouse-ci-action@v2
+        with:
+          urls: |
+            ${{ steps.now.outputs.preview-url }}
+          uploadArtifacts: true

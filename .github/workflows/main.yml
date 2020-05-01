@@ -10,8 +10,14 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v2
+      - name: build
+        run: |
+          npm install
+          npm build
       - name: Now CI Deployment
         uses: amondnet/now-deployment@v2.0.2
         with:
           zeit-token: ${{ secrets.VERCEL_TOKEN }}
           github-token: ${{ secrets.GITHUB_TOKEN }}
+          working-directory: dist/

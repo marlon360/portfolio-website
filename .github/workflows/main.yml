@@ -23,13 +23,9 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           now-org-id: ${{ secrets.VERCEL_ORG_ID }}
           now-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
-      - name: Generate Lighthouse Report
-        uses: justinribeiro/lighthouse-action@master
+      - name: Lighthouse CI Action
+        uses: treosh/lighthouse-ci-action@v2
         with:
-          url: ${{ steps.now.outputs.preview-url }}
-          wptConnectionSpeed: threegfast
-      - name: Saving Lighthouse Audit Artifacts
-        uses: actions/upload-artifact@master
-        with:
-          name: lighthouse-artifacts
-          path: './results'
+          urls: |
+            ${{ steps.now.outputs.preview-url }}
+          uploadArtifacts: true

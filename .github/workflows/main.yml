@@ -26,7 +26,6 @@ jobs:
       - name: Generate Lighthouse Report
         uses: justinribeiro/lighthouse-action@master
         with:
-          secret: ${{ secrets.GITHUB_TOKEN }}
           url: ${{ steps.now.outputs.preview-url }}
           wptConnectionSpeed: threegfast
       - name: Saving Lighthouse Audit Artifacts

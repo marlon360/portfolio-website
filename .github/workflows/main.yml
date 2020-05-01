@@ -16,9 +16,21 @@ jobs:
           npm install
           npm run build
       - name: Now CI Deployment
+        id: now
         uses: amondnet/now-deployment@v2.0.2
         with:
           zeit-token: ${{ secrets.VERCEL_TOKEN }}
           github-token: ${{ secrets.GITHUB_TOKEN }}
           now-org-id: ${{ secrets.VERCEL_ORG_ID }}
           now-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
+      - name: Generate Lighthouse Report
+        uses: justinribeiro/lighthouse-action@master
+        with:
+          secret: ${{ secrets.GITHUB_TOKEN }}
+          url: ${{ steps.now.outputs.preview-url }}
+          wptConnectionSpeed: threegfast
+      - name: Saving Lighthouse Audit Artifacts
+        uses: actions/upload-artifact@master
+        with:
+          name: lighthouse-artifacts
+          path: './results'

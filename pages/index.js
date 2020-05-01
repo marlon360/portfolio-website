@@ -10,9 +10,10 @@ export default function Home() {
 
   useEffect(() => new Typed(textInput.current, {
     stringsElement: typedStrings.current,
-    typeSpeed: 120,
+    typeSpeed: 100,
     backSpeed: 30,
-    backDelay: 2000,
+    backDelay: 1600,
+    startDelay: 2000,
     showCursor: false,
     loop: true
   }));
@@ -28,24 +29,26 @@ export default function Home() {
       <div id="landing" className="container">
         <div className="container-content">
           <div className="headline-container">
-            <h1>
+            <h1 className="fadein" style={{"animation-delay": "300ms"}}>
               Hey!<br />
               I'm Marlon.
             </h1>
-            <div ref={typedStrings}>
-              <h3>Software</h3>
-              <h3>Augmented Reality</h3>
-              <h3>Virtual Reality</h3>
-              <h3>Web</h3>
-              <h3>Game</h3>
+            <div className="fadein" style={{"animation-delay": "1000ms"}}>
+              <div ref={typedStrings}>
+                <h3>Software</h3>
+                <h3>Augmented Reality</h3>
+                <h3>Virtual Reality</h3>
+                <h3>Web</h3>
+                <h3>Game</h3>
+              </div>
+              <h3><span ref={textInput}/> Developer</h3>
             </div>
-            <h3><span ref={textInput}/> Developer</h3>
-            <div className="button-container">
+            <div className="button-container fadein" style={{"animation-delay": "1500ms"}}>
               <a className="primary" href="mailto:m.lueckert@me.com">Contact me</a>
               <a className="secondary" href="#projects">Projects</a>
             </div>
           </div>
-          <img alt="portrait" src="/portrait-1.jpg" />
+            <img className="fadein" style={{"animation-delay": "600ms"}} alt="portrait" src="/portrait-1.jpg" />
         </div>
       </div>
       

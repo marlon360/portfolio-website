@@ -113,3 +113,19 @@ h1, h2, h3, p {
 div, a {
     transition: background 600ms ease, border 600ms ease;
 }
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+        transform: translateY(10%)
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0)
+    }
+}
+.fadein {
+    animation-name: fadein;
+    animation-fill-mode: both;
+    animation-duration: 800ms;
+}

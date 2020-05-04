@@ -2,21 +2,33 @@ import { useRef, useEffect } from 'react';
 import Head from 'next/head'
 import TopbarComponent from '../components/topbar.component'
 import Typed from 'typed.js';
+import { getProjectsData } from '../lib/projects';
 
-export default function Home() {
+export async function getStaticProps() {
+  const allProjectsData = getProjectsData()
+  return {
+    props: {
+      allProjectsData
+    }
+  }
+}
+
+export default function Home({ allProjectsData }) {
 
   const textInput = useRef(null);
   const typedStrings = useRef(null);
 
-  useEffect(() => new Typed(textInput.current, {
-    stringsElement: typedStrings.current,
-    typeSpeed: 100,
-    backSpeed: 30,
-    backDelay: 1600,
-    startDelay: 2000,
-    showCursor: false,
-    loop: true
-  }));
+  useEffect(() => {
+    new Typed(textInput.current, {
+      stringsElement: typedStrings.current,
+      typeSpeed: 100,
+      backSpeed: 30,
+      backDelay: 1600,
+      startDelay: 2000,
+      showCursor: false,
+      loop: true
+    })
+  });
 
   return (
     <>
@@ -90,6 +102,24 @@ export default function Home() {
         <div className="container-content">
           <h2>Project Showcase</h2>
           <h3>What am I doing?</h3>
+          <div className="projects">
+            {allProjectsData.map(({ id, title, description, tags, image }) => (
+              <div className="project" key={id}>
+                <div className="project-image" style={{"background-image": "url('"+image+"')"}}></div>
+                <div className="project-description">
+                  <div>
+                    <h5>{title}</h5>
+                    <p>{description}</p>
+                  </div>
+                  <div className="tags">
+                  {tags.split(',').map((tag) => (
+                    <span key={tag}>{tag}</span>
+                  ))}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
 
@@ -154,6 +184,11 @@ export default function Home() {
         .container#landing a {
           flex-grow: 1;
         }
+        @media (max-width: 850px){
+          a.primary {
+            margin-right: 1rem;
+          }
+        }
         @media (max-width: 650px){
           .container#landing .container-content {
             flex-direction: column;
@@ -186,6 +221,12 @@ export default function Home() {
           font-weight: 400;
           margin: 0.8rem 0;
           color: var(--color-2);
+        }
+        @media (max-width: 850px){
+          .container h1 {
+            font-size: 5rem;
+            line-height: 5rem;
+          }
         }
         @media (max-width: 650px){
           .container h1 {
@@ -309,6 +350,115 @@ export default function Home() {
         .container#projects {
           background: var(--bg-2);
           text-align: center;
+        }
+
+        .projects {
+          margin: 4em 0;
+        }
+
+        .project {
+          margin-bottom: 3em;
+          display: flex;
+          flex-direction: row;
+          align-items: stretch;
+        }
+
+        @media (max-width: 650px){
+          .project {
+            flex-direction: column;
+            margin-bottom: 4em;
+          }
+        }
+
+        @media (min-width: 650px){
+          .project:nth-child(2n) .project-image {
+            order: 2;
+            margin-right: 0em;
+            margin-left: 1.2em;
+          }
+        }
+
+        .project-image {
+          background-size: cover;
+          background-position: center;
+          margin-right: 1.2em;
+          border-radius: 10px;
+          min-width: 230px;
+          min-height: 230px;
+        }
+        @media (max-width: 650px){
+          .project-image {
+            width: 100%;
+            margin-bottom: 1em;
+            min-width: initial;
+            min-height: 150px;
+          }
+        }
+
+        .project-description {
+          text-align: left;
+          background: var(--bg-3);
+          box-shadow: var(--shadow-m);
+          padding: 1.9em 1.9rem 1.4em 1.9em;
+          border-radius: 10px;
+          font-weight: 300;
+          z-index: 1;
+          border: var(--border-dark);
+          font-size: 1rem;
+          line-height: 1.45rem;
+          box-sizing: border-box;
+          flex-grow: 1;
+
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+
+        }
+
+        @media (max-width: 650px){
+          .project-description {
+            padding: 1.4em 1.4rem 1em 1.4em;
+          }
+        }
+
+        .project-description h5 {
+          margin: 0;
+          font-size: 1.6em;
+        }
+
+        .project-description p {
+          font-size: 1.1em;
+          margin: 0.7em 0;
+          color: var(--color-2);
+        }
+
+        .project-description .tags {
+          margin-top: 1em;
+        }
+
+        .project-description .tags span {
+          display: inline-block;
+          background: var(--bg-5);
+          color: var(--primary-text);
+          font-size: 1em;
+          text-align: center;
+          margin-right: 0.6em;
+          margin-bottom: 0.6em;
+          padding: 0.5em 0.8em;
+          border-radius: 8px;
+        }
+
+        @media (max-width: 650px){
+          .project-description h5 {
+            font-size: 1.5em;
+          }
+          .project-description p {
+            font-size: 1em;
+            margin: 0.6em 0;
+          }
+          .project-description .tags span {
+            font-size: 0.9em;
+          }
         }
 
       `}</style>

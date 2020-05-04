@@ -134,6 +134,7 @@ div, a {
     }
 }
 .fadein {
+    will-change: transform, opacity;
     animation-name: fadein;
     animation-fill-mode: both;
     animation-duration: 600ms;

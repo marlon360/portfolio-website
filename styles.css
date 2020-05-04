@@ -136,5 +136,5 @@ div, a {
 .fadein {
     animation-name: fadein;
     animation-fill-mode: both;
-    animation-duration: 800ms;
+    animation-duration: 600ms;
 }

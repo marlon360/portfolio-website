@@ -15,21 +15,6 @@ export async function getStaticProps() {
 
 export default function Home({ allProjectsData }) {
 
-  const textInput = useRef(null);
-  const typedStrings = useRef(null);
-
-  useEffect(() => {
-    new Typed(textInput.current, {
-      stringsElement: typedStrings.current,
-      typeSpeed: 100,
-      backSpeed: 30,
-      backDelay: 1600,
-      startDelay: 2000,
-      showCursor: false,
-      loop: true
-    })
-  });
-
   return (
     <>
       <Head>
@@ -41,26 +26,19 @@ export default function Home({ allProjectsData }) {
       <div id="landing" className="container">
         <div className="container-content">
           <div className="headline-container">
-            <h1 className="fadein" style={{"animation-delay": "300ms"}}>
+            <h1 className="fadein" style={{"animation-delay": "200ms"}}>
               Hey!<br />
               I'm Marlon.
             </h1>
-            <div className="fadein" style={{"animation-delay": "1000ms"}}>
-              <div ref={typedStrings}>
-                <h3>Software</h3>
-                <h3>Augmented Reality</h3>
-                <h3>Virtual Reality</h3>
-                <h3>Web</h3>
-                <h3>Game</h3>
-              </div>
-              <h3><span ref={textInput}/> Developer</h3>
+            <div className="fadein" style={{"animation-delay": "600ms"}}>
+              <h3><span/>VR / AR / Web / App Developer</h3>
             </div>
-            <div className="button-container fadein" style={{"animation-delay": "1500ms"}}>
+            <div className="button-container fadein" style={{"animation-delay": "900ms"}}>
               <a className="primary" href="mailto:m.lueckert@me.com">Contact me</a>
               <a className="secondary" href="#projects">Projects</a>
             </div>
           </div>
-            <img className="fadein" style={{"animation-delay": "600ms"}} alt="portrait" src="/portrait-1.jpg" />
+            <img className="fadein" style={{"animation-delay": "400ms"}} alt="portrait" src="/portrait-1.jpg" />
         </div>
       </div>
       

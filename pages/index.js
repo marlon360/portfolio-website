@@ -67,7 +67,7 @@ export default function Home({ allProjectsData }) {
           <h3>Who am I?</h3>
           <div className="arrangement-container">
             <div className="text-box">
-              I’m <b>Marlon Lückert</b>  from Hamburg, Germany! Currently I’m studying Digital Realiyt M.Sc. in Hamburg.
+              I’m <b>Marlon Lückert</b>  from Hamburg, Germany! Currently I’m studying Digital Reality M.Sc. in Hamburg.
               I love building experiences for the <b>Web</b>, <b>Augmented Reality</b>, <b>Virtual Reality</b> and <b>Games</b>.<br/>
               Have a look at my portfolio below!
             </div>

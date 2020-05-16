@@ -31,7 +31,7 @@ export default function Home({ allProjectsData }) {
               I'm Marlon.
             </h1>
             <div className="fadein" style={{"animation-delay": "550ms"}}>
-              <h3><span/>VR / AR / Web / App Developer</h3>
+              <h3><span/>Creative Developer</h3>
             </div>
             <div className="button-container fadein" style={{"animation-delay": "700ms"}}>
               <a className="primary" href="mailto:m.lueckert@me.com">Contact me</a>

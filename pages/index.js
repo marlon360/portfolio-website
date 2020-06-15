@@ -98,6 +98,9 @@ export default function Home({ allProjectsData }) {
                       { youtube != null &&
                         <a target="_blank" rel="noopener" href={youtube}><img alt="Youtube" src="/icons/youtube.svg" /></a>
                       }
+                      { website != null &&
+                        <a target="_blank" rel="noopener" href={website}><img alt="Link" src="/icons/link.svg" /></a>
+                      }
                     </div>
                     <p>{description}</p>
                   </div>

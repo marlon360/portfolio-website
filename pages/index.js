@@ -98,9 +98,6 @@ export default function Home({ allProjectsData }) {
                       { youtube != null &&
                         <a target="_blank" rel="noopener" href={youtube}><img alt="Youtube" src="/icons/youtube.svg" /></a>
                       }
-                      { website != null &&
-                        <a target="_blank" rel="noopener" href={website}><img alt="Link" src="/icons/link.svg" /></a>
-                      }
                     </div>
                     <p>{description}</p>
                   </div>
@@ -376,8 +373,8 @@ export default function Home({ allProjectsData }) {
         }
 
         .title-container a img, .title-container a svg {
-          height: 30px;
-          max-width: 30px;
+          height: 26px;
+          max-width: 26px;
         }
 
         @media (max-width: 650px){
